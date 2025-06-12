@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Dulce & Salado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Tienda Dulce & Salado</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="seccion">
+      <h2>Bienvenidos</h2>
+      <p>Explora nuestras tartas, tortas y pizzetas hechas con amor.</p>
+    </section>
+
+    <section id="productos" class="seccion">
+      <h2>Nuestros Productos</h2>
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="Tarta-Frutal.jpg" alt="Tarta Dulce" />
+          <h3>Tarta de Frutilla</h3>
+          <p>$2500</p>
+          <button onclick="agregarAlCarrito('Tarta de Frutilla')">Agregar</button>
+        </div>
+        <div class="producto">
+          <img src="tarta-de-dulce-de-leche-y-chocolate-1jpg.jpg" alt="Torta" />
+          <h3>Torta de Chocolate</h3>
+          <p>$3000</p>
+          <button onclick="agregarAlCarrito('Torta de Chocolate')">Agregar</button>
+        </div>
+        <div class="producto">
+          <img src="pizzetas-e1411049774208.jpg" alt="Pizzeta" />
+          <h3>Pizzeta Napolitana</h3>
+          <p>$2000</p>
+          <button onclick="agregarAlCarrito('Pizzeta Napolitana')">Agregar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="carrito" class="seccion">
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito"></ul>
+      <p id="total">Total: $0</p>
+      <!-- Campo oculto para preparar el texto del pedido -->
+      <textarea id="pedido" style="display:none;"></textarea>
+      <button onclick="enviarPedido()">Enviar Pedido</button>
+    </section>
+
+    <section id="contacto" class="seccion">
+      <h2>Contacto</h2>
+      <form>
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo" required />
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tienda Dulce & Salado</p>
+  </footer>
+
+  <!-- Script de EmailJS + Lógica -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
