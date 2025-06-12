@@ -96,3 +96,22 @@ footer {
   color: #b83b5e;
   margin-top: 2rem;
 }
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #25D366;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.whatsapp-link:hover {
+  opacity: 0.8;
+}
+
+.whatsapp-logo {
+  width: 24px;
+  height: 24px;
+}
